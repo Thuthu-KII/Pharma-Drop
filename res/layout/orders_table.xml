@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Prescrip_ID"
+            android:layout_width="0dp"
+            android:background="@color/grey"
+            android:layout_height="wrap_content"
+            android:text="Order Num."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/PatAcc"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/PatAcc"
+            android:layout_width="0dp"
+            android:background="@color/grey"
+            android:layout_height="wrap_content"
+            android:text="Order Date"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Prescrip_ID"
+            app:layout_constraintEnd_toStartOf="@id/DocAcc"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/DocAcc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Patient Acc."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/PatAcc"
+            app:layout_constraintEnd_toStartOf="@id/MedID"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/MedID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Order Status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/DocAcc"
+            app:layout_constraintEnd_toStartOf="@id/date"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Medicine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/MedID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Duplicate the above ConstraintLayout for additional rows -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Prescrip_ID_row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Prescription"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/PatAcc_row2"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/PatAcc_row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Patient Acc."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Prescrip_ID_row2"
+            app:layout_constraintEnd_toStartOf="@id/DocAcc_row2"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/DocAcc_row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Doctor Acc."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/PatAcc_row2"
+            app:layout_constraintEnd_toStartOf="@id/MedID_row2"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/MedID_row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MediCode"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/DocAcc_row2"
+            app:layout_constraintEnd_toStartOf="@id/date_row2"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/date_row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date Presc."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/MedID_row2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Repeat for as many rows as needed -->
+
+</LinearLayout>
